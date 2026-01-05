@@ -100,7 +100,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-gray-50 p-8 font-sans">
       <h1 className="text-4xl font-bold text-center mb-8 text-indigo-600">
-        Toddler Meal Planner Demo
+        AI-powered Toddler Meal Planner (v 1.1)
       </h1>
 
       {initialChildren.map((child: Child) => (
