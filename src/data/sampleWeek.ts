@@ -1,18 +1,11 @@
-// --------------------
-// Children
-// --------------------
-export const children = [
-  { id: "1", name: "Colette", ageMonths: 29 },
-  { id: "2", name: "Sloane", ageMonths: 15 },
-];
+// src/data/sampleWeek.ts
 
-// --------------------
-// Planned Meals
-// --------------------
-export const plannedMeals = [
+import { Meal } from "../types/types";
+
+export const sampleWeek: Meal[] = [
   {
-    id: "101",
-    childId: "1",
+    id: "1",
+    childId: "0",
     date: "2026-01-05",
     mealType: "breakfast",
     mealName: "Oatmeal",
@@ -20,30 +13,30 @@ export const plannedMeals = [
     outcome: null,
   },
   {
-    id: "102",
-    childId: "1",
+    id: "2",
+    childId: "0",
     date: "2026-01-05",
     mealType: "lunch",
     mealName: "Chicken & Veggies",
-    components: ["Chicken", "Carrot", "Peas"],
+    components: ["Chicken", "Carrots", "Peas"],
     outcome: null,
   },
   {
-    id: "103",
-    childId: "2",
+    id: "3",
+    childId: "1",
     date: "2026-01-05",
     mealType: "breakfast",
-    mealName: "Pancakes",
-    components: ["Flour", "Egg", "Milk"],
+    mealName: "Yogurt & Fruit",
+    components: ["Yogurt", "Strawberries", "Blueberries"],
     outcome: null,
   },
   {
-    id: "104",
-    childId: "2",
+    id: "4",
+    childId: "1",
     date: "2026-01-05",
     mealType: "lunch",
-    mealName: "Mac & Cheese",
-    components: ["Pasta", "Cheese", "Butter"],
+    mealName: "Turkey Sandwich",
+    components: ["Turkey", "Bread", "Lettuce"],
     outcome: null,
   },
-] as const; // ✅ tell TS these are readonly literal values
+];
