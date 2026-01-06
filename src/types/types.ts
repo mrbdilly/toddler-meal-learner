@@ -1,26 +1,21 @@
-export type Child = {
-  id: string;
-  name: string;
-  ageMonths: number;
+// src/types/types.ts
+
+// Represents a single meal
+export type Meal = {
+  id: string;           // unique identifier for the meal
+  name: string;         // name of the meal
+  calories: number;     // optional calorie count
+  time?: string;        // optional time, e.g., "Breakfast"
+  notes?: string;       // optional notes
 };
 
-export type PlannedMeal = {
-  id: string;
-  childId: string;
-  date: string; // e.g., "2026-01-05"
-  mealType: "breakfast" | "lunch" | "dinner";
-  mealName: string; // e.g., "chicken + rice"
-  components: string[]; // e.g., ["chicken", "rice", "broccoli"]
+// Optional: represents a day of meals
+export type Day = {
+  date: string;         // e.g., "2026-01-06"
+  meals: Meal[];        // array of meals for the day
 };
 
-export type MealOutcome = {
-  plannedMealId: string;
-  overallResult: "ate_most" | "ate_some" | "ate_little";
-  componentsEaten: string[];
-};
-
-export type SnackFallback = {
-  plannedMealId: string;
-  snackType: string; // e.g., "yogurt pouch"
-  timing: "during" | "after";
+// Optional: represents a week of meals
+export type Week = {
+  days: Day[];
 };
