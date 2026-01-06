@@ -1,9 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { Meal } from "@types/types";
-import { sampleWeek } from "@data/sampleWeek";
-
+import { Meal } from "../../types/types"; // relative path from src/app/page.tsx
+import { sampleWeek } from "../data/sampleWeek";
 export default function Home() {
   // --- Onboarding / Welcome ---
   const [showWelcome, setShowWelcome] = useState(true);
